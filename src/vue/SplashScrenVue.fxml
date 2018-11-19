@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #f1f2f6;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashScreenController">
+   <children>
+      <Label layoutX="438.0" layoutY="226.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="124.0" text="تحميل ....   " textFill="#3498db" AnchorPane.bottomAnchor="257.0" AnchorPane.leftAnchor="438.0" AnchorPane.rightAnchor="438.0" AnchorPane.topAnchor="226.0">
+         <font>
+            <Font name="Andalus" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EtablissementController">
+   <children>
+      <HBox prefHeight="57.0" prefWidth="600.0">
+         <children>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" prefHeight="17.0" prefWidth="116.0" text="الجهة :">
+               <HBox.margin>
+                  <Insets left="80.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="116.0" text="النوع :">
+               <HBox.margin>
+                  <Insets left="80.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="126.0" layoutY="10.0" prefHeight="17.0" prefWidth="116.0" text="الإسم :">
+               <HBox.margin>
+                  <Insets left="80.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="-1.0" layoutY="39.0" prefHeight="73.0" prefWidth="600.0">
+         <children>
+            <JFXTextField fx:id="region" alignment="TOP_RIGHT">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="type" alignment="TOP_RIGHT" layoutX="10.0" layoutY="10.0">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="nom" alignment="TOP_RIGHT" layoutX="145.0" layoutY="10.0">
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox layoutY="62.0" prefHeight="100.0" prefWidth="600.0">
+         <children>
+            <JFXButton alignment="CENTER" onAction="#update" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffb3b3; -fx-border-radius: 200;" text="تعديل">
+               <HBox.margin>
+                  <Insets left="80.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" layoutX="10.0" layoutY="10.0" onAction="#delete" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffb3b3; -fx-border-radius: 200;" text="مسح">
+               <HBox.margin>
+                  <Insets left="80.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" layoutX="62.0" layoutY="10.0" onAction="#save" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ffb3b3;" text="إظافة">
+               <HBox.margin>
+                  <Insets left="80.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox layoutY="136.0" prefHeight="176.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="etablissement" prefHeight="176.0" prefWidth="522.0">
+              <columns>
+                <TableColumn fx:id="cregion" prefWidth="186.0" text="الجهة " />
+                <TableColumn fx:id="ctype" prefWidth="155.0" text="النوع" />
+                  <TableColumn fx:id="cnom" prefWidth="258.0" text="الإسم" />
+              </columns>
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </TableView>
+         </children>
+      </HBox>
+      <JFXTreeTableView layoutX="76.0" layoutY="329.0" prefHeight="209.0" prefWidth="636.0" />
+   </children>
+</AnchorPane>

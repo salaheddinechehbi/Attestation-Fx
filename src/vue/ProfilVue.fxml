@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfilController">
+   <children>
+      <JFXButton layoutX="137.0" layoutY="84.0" onAction="#updateProfil" text="تعديل" />
+      <JFXButton layoutX="334.0" layoutY="84.0" onAction="#deleteProfil" text="مسح" />
+      <JFXButton layoutX="510.0" layoutY="84.0" onAction="#saveProfil" text="إظافة" />
+      <JFXTextField fx:id="libelle" layoutX="113.0" layoutY="21.0" />
+      <JFXTextField fx:id="code" layoutX="375.0" layoutY="33.0" />
+      <TableView fx:id="profils" layoutX="160.0" layoutY="127.0" prefHeight="144.0" prefWidth="369.0">
+        <columns>
+          <TableColumn fx:id="cCode" prefWidth="132.0" text="Code" />
+          <TableColumn fx:id="cLibelle" prefWidth="220.0" text="Libelle" />
+        </columns>
+      </TableView>
+      <JFXTreeTableView fx:id="treeView" layoutX="45.0" layoutY="310.0" prefHeight="276.0" prefWidth="645.0" />
+   </children>
+</AnchorPane>

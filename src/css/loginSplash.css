@@ -1,0 +1,12 @@
+.parent{
+    -fx-background-color: #f1f2f6;
+}
+
+.btn{
+  -fx-border-color: #3498db;
+  -fx-border-style: solid;
+  -fx-border-width: 1px;
+  -fx-background-color: #ffffff;
+  -fx-padding: 5px;
+  -fx-cursor: hand;
+}
