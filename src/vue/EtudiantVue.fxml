@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="anchorEtudiant" prefHeight="600.0" prefWidth="750.0" stylesheets="@../css/profilStyle.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EtudiantController">
+   <children>
+      <JFXButton layoutX="20.0" layoutY="340.0" onAction="#uploadFile" prefHeight="29.0" prefWidth="154.0" styleClass="btn-upload" text="تحميل ملف التلاميذ" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTreeTableView fx:id="treeTableView1" layoutX="12.0" layoutY="376.0" maxHeight="1.7976931348623157E308" prefHeight="174.0" prefWidth="710.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="376.0">
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </JFXTreeTableView>
+      <JFXTextField fx:id="searshInput" alignment="CENTER_RIGHT" focusColor="#4bcd7f" labelFloat="true" layoutX="460.0" layoutY="332.0" prefHeight="37.0" prefWidth="270.0" promptText="بحث ..." AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER_RIGHT" labelFloat="true" layoutX="595.0" layoutY="22.0" prefHeight="31.0" prefWidth="250.0" promptText="رقم التسجيل" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker layoutX="471.0" layoutY="280.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="28.0" prefWidth="140.0" AnchorPane.rightAnchor="139.0" />
+      <JFXDatePicker layoutX="187.0" layoutY="220.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="28.0" prefWidth="173.0" AnchorPane.rightAnchor="390.0" />
+      <JFXTextField alignment="CENTER_RIGHT" labelFloat="true" layoutX="194.0" layoutY="22.0" prefHeight="31.0" prefWidth="250.0" promptText="الاسم الكامل" AnchorPane.rightAnchor="306.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER_RIGHT" labelFloat="true" layoutX="561.0" layoutY="220.0" prefHeight="31.0" prefWidth="250.0" promptText="مكان الازدياد" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER_RIGHT" labelFloat="true" layoutX="194.0" layoutY="83.0" prefHeight="31.0" prefWidth="250.0" promptText="قرار مجلس القسم" AnchorPane.rightAnchor="306.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER_RIGHT" labelFloat="true" layoutX="561.0" layoutY="151.0" prefHeight="31.0" prefWidth="250.0" promptText="الرقم الوطني" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER_RIGHT" labelFloat="true" layoutX="561.0" layoutY="83.0" prefHeight="31.0" prefWidth="250.0" promptText="آخر مستوى" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField alignment="CENTER_RIGHT" labelFloat="true" layoutX="194.0" layoutY="151.0" prefHeight="31.0" prefWidth="250.0" promptText="رقم الملف" AnchorPane.rightAnchor="306.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="20.0" layoutY="21.0" onAction="#addEtudiant" prefHeight="33.0" prefWidth="154.0" styleClass="btn-add" text="إظافة" textFill="#f4f2f2" AnchorPane.rightAnchor="576.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="20.0" layoutY="82.0" onAction="#updateEtudiant" prefHeight="33.0" prefWidth="154.0" styleClass="btn-update" text="تعديل" textFill="#f4f2f2" AnchorPane.rightAnchor="576.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="20.0" layoutY="151.0" onAction="#deleteEtudiant" prefHeight="33.0" prefWidth="154.0" styleClass="btn-delete" text="مسح" textFill="#f4f2f2" AnchorPane.rightAnchor="576.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="373.0" layoutY="229.0" prefHeight="33.0" prefWidth="69.0" text="تاريخ الإزدياد :" AnchorPane.rightAnchor="308.0" />
+      <Label layoutX="647.0" layoutY="289.0" prefHeight="28.0" prefWidth="74.0" text="تاريخ المغادرة :" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>

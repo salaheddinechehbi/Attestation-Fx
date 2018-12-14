@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #f1f2f6;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashScreenController">
+<AnchorPane id="AnchorPane" fx:id="anchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f1f2f6;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashScreenController">
    <children>
-      <Label layoutX="438.0" layoutY="226.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="124.0" text="تحميل ....   " textFill="#3498db" AnchorPane.bottomAnchor="257.0" AnchorPane.leftAnchor="438.0" AnchorPane.rightAnchor="438.0" AnchorPane.topAnchor="226.0">
+      <Label layoutX="236.0" layoutY="171.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="-83.0" prefWidth="107.0" text="تحميل ....   " textFill="#3498db" AnchorPane.bottomAnchor="189.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="204.0" AnchorPane.topAnchor="171.0">
          <font>
             <Font name="Andalus" size="27.0" />
          </font>

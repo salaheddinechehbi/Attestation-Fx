@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="600.0" styleClass="parent" stylesheets="@../css/loginSplash.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="475.0" styleClass="root" stylesheets="@../css/loginSplash.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
-      <JFXTextField fx:id="emailField" alignment="CENTER_RIGHT" focusColor="#042eae" labelFloat="true" layoutX="126.0" layoutY="156.0" prefHeight="31.0" prefWidth="348.0" promptText="البريد الإلكتروني">
+      <JFXTextField fx:id="emailField" alignment="CENTER_RIGHT" focusColor="WHITE" labelFloat="true" layoutX="64.0" layoutY="51.0" prefHeight="31.0" prefWidth="348.0" promptText="البريد الإلكتروني" unFocusColor="WHITE" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="63.0">
          <font>
             <Font size="15.0" />
          </font></JFXTextField>
-      <JFXTextField alignment="CENTER_RIGHT" focusColor="#042eae" labelFloat="true" layoutX="126.0" layoutY="226.0" prefHeight="31.0" prefWidth="348.0" promptText="كلمة السر">
-         <font>
-            <Font size="15.0" />
-         </font></JFXTextField>
-      <JFXButton layoutX="126.0" layoutY="329.0" onAction="#loginEmploye" prefHeight="24.0" prefWidth="124.0" styleClass="btn" text="الدخول" textFill="#4a4d4d">
+      <JFXButton layoutX="64.0" layoutY="195.0" onAction="#loginEmploye" prefHeight="24.0" prefWidth="124.0" styleClass="btn" text="الدخول" textFill="#4a4d4d" AnchorPane.rightAnchor="287.0">
          <font>
             <Font name="Monospaced Bold" size="15.0" />
          </font></JFXButton>
+      <JFXCheckBox alignment="CENTER_RIGHT" layoutX="220.0" layoutY="200.0" text="تذكرني" textFill="WHITE" unCheckedColor="#b23030" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXPasswordField fx:id="pass" alignment="CENTER_RIGHT" focusColor="WHITE" labelFloat="true" layoutX="64.0" layoutY="138.0" prefHeight="25.0" prefWidth="348.0" promptText="كلمة السر" unFocusColor="WHITE" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="63.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXPasswordField>
    </children>
 </AnchorPane>

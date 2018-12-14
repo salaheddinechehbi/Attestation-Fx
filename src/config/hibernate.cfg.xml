@@ -51,6 +51,6 @@ Contributor(s):
     <mapping class="classe.Profil"/>
     <mapping class="classe.Employe"/>
     <mapping class="classe.Etablissement"/>
-    <mapping class="classe.Etudient"/>
+    <mapping class="classe.Etudiant"/>
   </session-factory>
 </hibernate-configuration>

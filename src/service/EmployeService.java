@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package service;
 
 import classe.Employe;
@@ -13,10 +8,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
 
-/**
- *
- * @author Utilisateur
- */
 public class EmployeService implements IDao<Employe> {
 
     @Override
@@ -117,15 +108,36 @@ public class EmployeService implements IDao<Employe> {
             return f;
         }
     }
- public Employe findByEmail(String email) {
+    
+    public Employe findByEmail(String email,String pass) {
         Employe e = null;
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        e = (Employe) session.createQuery("from Employe where email = ?").setParameter(0, email).uniqueResult();
+        e = (Employe) session.createQuery("from Employe where email=:email and password=:pass").setParameter("email", email).setParameter("pass", util.Util.md5(pass)).uniqueResult();
         session.getTransaction().commit();
         return e;
     }
     
+    
+    public int countEmploye(){
+        int nbr = 0;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        nbr = Integer.parseInt(session.createQuery("Select Count(*) From Employe").uniqueResult().toString());
+        session.getTransaction().commit();
+        session.close();
+        return nbr;
+    }
+    
+    public List<Object[]> employeParProfil(){
+        List<Object[]> list = null;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        list = session.createSQLQuery("Select p.libelle,Count(*) AS 'nbrEmp' FROM Employe e INNER JOIN Profil p ON e.profil_id = p.id GROUP BY  p.libelle").list();
+        session.getTransaction().commit();        
+        session.close();
+        return list;
+    }
     
 
 }

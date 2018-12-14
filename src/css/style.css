@@ -1,0 +1,37 @@
+.box1{
+    -fx-background-color: mediumseagreen;
+    -fx-opacity:0.7;
+}
+.box2{
+    -fx-background-color: dodgerblue;
+    -fx-opacity:0.7;
+}
+.box3{
+    -fx-background-color: orange;
+    -fx-opacity:0.7;
+}
+.box1:hover{
+    -fx-background-color: #373E48;
+    -fx-opacity:1;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #1FD6D1;
+    -fx-border-style: solid;    
+}
+.box2:hover{
+    -fx-background-color: #373E48;
+    -fx-opacity:1;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #1FD6D1;
+    -fx-border-style: solid;    
+}
+.box3:hover{
+    -fx-background-color: #373E48;
+    -fx-opacity:1;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #1FD6D1;
+    -fx-border-style: solid;    
+}
+ 

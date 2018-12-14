@@ -1,0 +1,47 @@
+.btn-add{
+  -fx-border-color: #3498db;
+  -fx-border-style: solid;
+  -fx-border-width: 1px;
+  -fx-background-color: teal;
+  -fx-padding: 5px;
+  -fx-cursor: hand;
+}
+
+.btn-update{
+  -fx-border-color: #3498db;
+  -fx-border-style: solid;
+  -fx-border-width: 1px;
+  -fx-background-color: #80ced6;
+  -fx-padding: 5px;
+  -fx-cursor: hand;
+}
+
+.btn-delete{
+  -fx-border-color: #e06377;
+  -fx-border-style: solid;
+  -fx-border-width: 1px;
+  -fx-background-color: #c83349;
+  -fx-padding: 5px;
+  -fx-cursor: hand;
+}
+
+.btn-upload{
+  -fx-border-color: #2fc97c;
+  -fx-border-style: solid;
+  -fx-border-width: 1px;
+  -fx-background-color: #2fc97c;
+  -fx-padding: 5px;
+  -fx-cursor: hand;
+}
+
+.jfx-snackbar-content{
+    -fx-background-color: #2fc97c;
+    -fx-border-color: #27CA41;
+      -fx-border-style: solid;
+      -fx-border-width: 1px;    
+}
+
+.jfx-snackbar-toast{
+    -fx-text-fill:#373E48;
+}
+

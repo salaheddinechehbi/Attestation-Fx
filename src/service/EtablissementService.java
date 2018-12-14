@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package service;
 
 import classe.Etablissement;
@@ -13,10 +8,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
 
-/**
- *
- * @author salah
- */
 public class EtablissementService implements IDao<Etablissement> {
 
     @Override
@@ -119,5 +110,13 @@ public class EtablissementService implements IDao<Etablissement> {
 
     }
 
+    public int countEtablissement(){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        int e = Integer.parseInt(session.createQuery("Select COUNT(*) From Etablissement").uniqueResult().toString());
+        session.getTransaction().commit();
+        session.close();
+        return e;        
+    }
 }
 

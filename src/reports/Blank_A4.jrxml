@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isTitleNewPage="true" uuid="2f78e4ae-dfd0-4f26-bb4b-c2bcde02e321">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="84"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<image>
+				<reportElement x="250" y="-10" width="310" height="90" uuid="3af3d7b0-4885-46bd-931d-598b171fc88b"/>
+				<imageExpression><![CDATA["C:/Users/salah/Desktop/tarbiya.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="170" y="0" width="60" height="20" uuid="f9c10a3a-7315-4a5f-a9a3-9ea9cc61eb62"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="11"/>
+				</textElement>
+				<text><![CDATA[المؤسسة :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="20" width="60" height="20" uuid="8e9c04f0-0944-49d2-8314-d594b9887d7e"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="11"/>
+				</textElement>
+				<text><![CDATA[البلدية :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="40" width="80" height="20" uuid="c5f69662-d926-44a3-9417-836b344471bb"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="11"/>
+				</textElement>
+				<text><![CDATA[ رمز المؤسسة :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="60" width="60" height="20" uuid="8c1267af-0a46-46f5-99aa-c717f0d9c768"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="11"/>
+				</textElement>
+				<text><![CDATA[الهاتف :]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="370" y="10" width="150" height="30" uuid="43a56833-e9eb-49ef-82ec-2301ee9bef5b"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[شهادة مدرسية ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="390" y="10" width="154" height="20" uuid="c8882e64-8ff2-4fb3-832e-f49e7a5429ba"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[يشهد الموقع أسفله السيد :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="40" width="100" height="20" uuid="b62210a0-1c6c-4482-8adb-6469c1d41be3"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[بصفته :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="40" width="100" height="18" uuid="c62c9805-c283-4193-98fa-7c97c0657f90"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[مديرا]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="198" splitType="Stretch">
+			<staticText>
+				<reportElement x="450" y="10" width="100" height="30" uuid="28f8649a-5f42-4b2d-aad3-b49dc101ae92"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[أن التلميد(ة) : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="40" width="100" height="30" uuid="bcce3266-680e-4f59-b4ac-81dbfaf4ca65"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[المولود(ة) ب :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="40" width="40" height="20" uuid="32671257-cf2a-490e-b413-143e4bf793d6"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[بتاريخ :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="70" width="105" height="30" uuid="be20a521-2798-4348-bf21-992458e35859"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[المسجل تحث رقم :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="66" width="90" height="20" uuid="e9548132-c968-42fd-b74d-b2174dc285b2"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[الرقم الوطني :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="100" width="190" height="20" uuid="9a0c50ba-a975-4692-b271-b5328de08c84"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[كان(ت) يتابع دراسته(ها) في : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="120" width="190" height="20" uuid="448c8950-159c-4d10-bd91-665e2c08b9f4"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[و غادر(ت) المؤسسة بتاريخ : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="141" width="190" height="20" uuid="fd451dd7-b8b9-4afb-a95d-048bb5222efd"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[سبب المغادرة :]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="77" y="20" width="400" height="20" uuid="1f7402cf-fdd9-440f-a5d2-bf90f6a51c9c"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[ملاحظات : سلمت له هذه الشهادة لأغراض إدارية]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement x="310" y="19" width="20" height="20" uuid="08f1b8bb-5c43-4f31-acb4-392fea6c6d93"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[حرر]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="40" width="100" height="20" uuid="ed96de6a-ca83-4fcf-a5e2-c7ae9a7d492e"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[توقيع المدير ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="19" width="30" height="21" uuid="b07ad496-8d09-4fc2-b899-cd8b36db95a9"/>
+				<text><![CDATA[في :]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="70" y="8" width="330" height="20" uuid="1c43cc17-e724-46ac-9f0a-abbe4964a83c"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[هذه الشهادة  لا تخول لصاحبها التسجيل في مؤسسة أخرى]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="8" width="60" height="20" uuid="d416cbc2-a609-42d7-8454-7a2f3283f8e2"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ملحوظة : ]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

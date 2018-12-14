@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="600.0" prefWidth="750.0" stylesheets="@../css/profilStyle.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttestationController">
+   <children>
+      <JFXButton layoutX="53.0" layoutY="24.0" onAction="#imprimerAttestation" prefHeight="29.0" prefWidth="154.0" styleClass="btn-upload" text="تحميل الشهادة" AnchorPane.rightAnchor="543.0" AnchorPane.topAnchor="24.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTreeTableView fx:id="treeTableView1" layoutX="22.0" layoutY="129.0" maxHeight="1.7976931348623157E308" prefHeight="431.0" prefWidth="726.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="129.0">
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </JFXTreeTableView>
+      <JFXTextField fx:id="searshInput" alignment="CENTER_RIGHT" focusColor="#4bcd7f" labelFloat="true" layoutX="470.0" layoutY="81.0" prefHeight="37.0" prefWidth="270.0" promptText="بحث ..." AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="81.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </JFXTextField>
+   </children>
+</AnchorPane>

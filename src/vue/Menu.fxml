@@ -3,14 +3,12 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
@@ -19,187 +17,210 @@
    <right>
       <AnchorPane BorderPane.alignment="CENTER_RIGHT">
          <children>
-            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="620.0" prefWidth="250.0" styleClass="sidebar" stylesheets="@../css/stylesheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="543.0" prefWidth="233.0" styleClass="sidebar" stylesheets="@../css/stylesheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="620.0" prefWidth="250.0" styleClass="sidebar" stylesheets="@../css/stylesheet.css">
+                  <HBox layoutX="144.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="5.0">
                      <children>
-                        <Label alignment="CENTER_RIGHT" layoutX="220.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#close_app" prefHeight="13.0" prefWidth="13.0" styleClass="close-btn" />
-                        <Label alignment="CENTER_RIGHT" layoutX="160.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#minimize_app" prefHeight="13.0" prefWidth="13.0" styleClass="min-btn" />
-                        <Label alignment="CENTER_RIGHT" layoutX="190.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#maximize_app" prefHeight="13.0" prefWidth="13.0" styleClass="max-btn" />
-                        <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="35.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="127.0" prefWidth="201.0">
-                           <effect>
-                              <DropShadow color="#fffafa" />
-                           </effect>
+                        <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#minimize_app" prefHeight="13.0" prefWidth="13.0" styleClass="min-btn">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#maximize_app" prefHeight="13.0" prefWidth="13.0" styleClass="max-btn">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#close_app" prefHeight="13.0" prefWidth="13.0" styleClass="close-btn">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="9.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="127.0" prefWidth="201.0">
+                     <effect>
+                        <DropShadow color="#fffafa" />
+                     </effect>
+                     <children>
+                        <VBox prefHeight="117.0" prefWidth="154.0">
                            <children>
-                              <VBox prefHeight="117.0" prefWidth="154.0">
+                              <Circle fx:id="circle" fill="DODGERBLUE" radius="50.0" stroke="#1ebeee" strokeType="INSIDE">
+                                 <VBox.margin>
+                                    <Insets left="40.0" />
+                                 </VBox.margin>
+                              </Circle>
+                              <Hyperlink fx:id="nomEmploye" alignment="CENTER_RIGHT" contentDisplay="RIGHT" nodeOrientation="RIGHT_TO_LEFT" onAction="#infoView" text="Hyperlink" underline="true">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Hyperlink>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </HBox>
+                  <AnchorPane layoutX="8.0" layoutY="146.0" AnchorPane.topAnchor="174.0">
+                     <children>
+                        <AnchorPane layoutX="1.0">
+                           <children>
+                              <VBox>
                                  <children>
-                                    <Circle fx:id="circle" fill="DODGERBLUE" radius="50.0" stroke="#1ebeee" strokeType="INSIDE">
-                                       <VBox.margin>
-                                          <Insets left="35.0" />
-                                       </VBox.margin>
-                                    </Circle>
-                                    <Label contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="110.0" text="Create Music" textAlignment="RIGHT" textFill="#807e7e">
+                                    <HBox fx:id="statistique" alignment="CENTER_RIGHT" onMouseClicked="#statistique" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
+                                       <children>
+                                          <Label text="الإستقبال" textFill="#727070">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Calibri Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIcon iconName="HOME" />
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </HBox>
+                                    <AnchorPane fx:id="proetaemp">
+                                       <children>
+                                          <HBox fx:id="wadifa" alignment="CENTER_RIGHT" onMouseClicked="#profil" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <children>
+                                                <Label text="الوظيفة" textFill="#727070">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <FontAwesomeIcon iconName="FOLDER_OPEN" />
+                                             </children>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                          <HBox fx:id="mosasa" alignment="CENTER_RIGHT" layoutY="40.0" onMouseClicked="#etablissement" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <children>
+                                                <Label text="المؤسسة" textFill="#727070">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <FontAwesomeIcon iconName="INBOX" />
+                                             </children>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                          <HBox fx:id="mowadafon" alignment="CENTER_RIGHT" layoutY="80.0" onMouseClicked="#employe" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <children>
+                                                <Label text="الموظفون" textFill="#727070">
+                                                   <HBox.margin>
+                                                      <Insets right="15.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="Calibri Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <FontAwesomeIcon iconName="USERS" />
+                                             </children>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="174.0" AnchorPane.topAnchor="174.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" nodeOrientation="RIGHT_TO_LEFT" text="الشهادة" textAlignment="RIGHT" textFill="#727070" underline="true">
                                        <font>
                                           <Font name="Calibri Bold" size="14.0" />
                                        </font>
                                        <VBox.margin>
-                                          <Insets left="20.0" />
+                                          <Insets left="140.0" />
                                        </VBox.margin>
-                                       <padding>
-                                          <Insets top="5.0" />
-                                       </padding>
                                     </Label>
+                                    <HBox fx:id="talamid" alignment="CENTER_RIGHT" onMouseClicked="#etudiant" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
+                                       <children>
+                                          <Label text="التلاميذ" textFill="#727070">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Calibri Bold" size="14.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets right="15.0" />
+                                             </padding>
+                                          </Label>
+                                          <FontAwesomeIcon iconName="USERS" />
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </HBox>
+                                    <HBox fx:id="chahada" alignment="CENTER_RIGHT" onMouseClicked="#imprimer" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                       <children>
+                                          <Label text="طبع الشهادة" textFill="#727070">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font name="Calibri Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIcon iconName="FILE" />
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </HBox>
                                  </children>
                               </VBox>
                            </children>
-                           <padding>
-                              <Insets left="10.0" />
-                           </padding>
-                        </HBox>
-                        <HBox alignment="CENTER_RIGHT" layoutX="26.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
-                           <children>
-                              <Label text="الإستقبال" textFill="#727070">
-                                 <HBox.margin>
-                                    <Insets right="15.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font name="Calibri Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <FontAwesomeIcon iconName="HOME" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </HBox>
-                        <HBox alignment="CENTER_RIGHT" layoutX="25.0" layoutY="200.0" onMouseClicked="#profil" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
-                           <padding>
-                              <Insets left="10.0" />
-                           </padding>
-                           <children>
-                              <Label text="الوظيفة" textFill="#727070">
-                                 <HBox.margin>
-                                    <Insets right="5.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font name="Calibri Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                                 <image>
-                                    <Image url="@../../../../../EGDownloads/Genuine%20Coder/dash%20Music/Ios%20Music%20Player/src/main/icons/Folder_30px.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </HBox>
-                        <HBox alignment="CENTER_RIGHT" layoutX="26.0" layoutY="240.0" onMouseClicked="#etablissement" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
-                           <padding>
-                              <Insets left="10.0" />
-                           </padding>
-                           <children>
-                              <Label text="المؤسسة" textFill="#727070">
-                                 <HBox.margin>
-                                    <Insets right="5.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font name="Calibri Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                                 <image>
-                                    <Image url="@../../../../../EGDownloads/Genuine%20Coder/dash%20Music/Ios%20Music%20Player/src/main/icons/Direction_30px.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </HBox>
-                        <HBox alignment="CENTER_RIGHT" layoutX="27.0" layoutY="280.0" onMouseClicked="#employe" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
-                           <padding>
-                              <Insets left="10.0" />
-                           </padding>
-                           <children>
-                              <Label text="الموظفون" textFill="#727070">
-                                 <HBox.margin>
-                                    <Insets right="15.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font name="Calibri Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <FontAwesomeIcon iconName="USERS" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </HBox>
-                        <Label alignment="CENTER_RIGHT" layoutX="200.0" layoutY="340.0" text="الشهادة" textAlignment="RIGHT" textFill="#727070" underline="true">
-                           <font>
-                              <Font name="Calibri Bold" size="14.0" />
-                           </font>
-                        </Label>
-                        <HBox alignment="CENTER_RIGHT" layoutX="24.0" layoutY="370.0" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
-                           <children>
-                              <Label text="التلاميذ" textFill="#727070">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font name="Calibri Bold" size="14.0" />
-                                 </font>
-                                 <padding>
-                                    <Insets right="15.0" />
-                                 </padding>
-                              </Label>
-                              <FontAwesomeIcon iconName="USERS" />
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </HBox>
-                        <HBox alignment="CENTER_RIGHT" layoutX="24.0" layoutY="410.0" prefHeight="40.0" prefWidth="200.0" styleClass="sidebar-btns">
-                           <padding>
-                              <Insets left="10.0" />
-                           </padding>
-                           <children>
-                              <Label text="طبع الشهادة" textFill="#727070">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font name="Calibri Bold" size="14.0" />
-                                 </font>
-                              </Label>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                                 <image>
-                                    <Image url="@../../../../../EGDownloads/Genuine%20Coder/dash%20Music/Ios%20Music%20Player/src/main/icons/Audio%20Wave_30px.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </HBox>
+                        </AnchorPane>
                      </children>
-                  </Pane>
+                  </AnchorPane>
+                  <Hyperlink fx:id="logout" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="111.0" layoutY="545.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#logOut" text="تسجيل الخروج" underline="true" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Hyperlink>
                </children>
-               <padding>
-                  <Insets top="5.0" />
-               </padding>
-            </Pane>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </right>
@@ -215,10 +236,6 @@
       </HBox>
    </bottom>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f1f2f6;" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="employeId" layoutX="361.0" layoutY="282.0" text="Label" />
-         </children>
-      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f1f2f6;" stylesheets="@../css/style.css" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="348af839-5c02-4803-b406-05220fd473d7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="222"/>
+	<parameter name="etudiant_nom" class="java.lang.String"/>
+	<parameter name="etudiant_lieu" class="java.lang.String"/>
+	<parameter name="etudiant_num" class="java.lang.String"/>
+	<parameter name="etudiant_niveau" class="java.lang.String"/>
+	<parameter name="etudiant_dateN" class="java.lang.String"/>
+	<parameter name="etudiant_dateD" class="java.lang.String"/>
+	<parameter name="etudiant_decision" class="java.lang.String"/>
+	<parameter name="etudiant_code" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     etablissement.`id` AS etablissement_id,
+     etablissement.`nom` AS etablissement_nom,
+     etablissement.`region` AS etablissement_region,
+     etablissement.`type` AS etablissement_type,
+     etablissement.`acadimie` AS etablissement_acadimie,
+     etablissement.`baladiya` AS etablissement_baladiya,
+     etablissement.`code` AS etablissement_code,
+     etablissement.`tel` AS etablissement_tel
+FROM
+     `etablissement` etablissement]]>
+	</queryString>
+	<field name="etablissement_nom" class="java.lang.String"/>
+	<field name="etablissement_region" class="java.lang.String"/>
+	<field name="etablissement_type" class="java.lang.String"/>
+	<field name="etablissement_acadimie" class="java.lang.String"/>
+	<field name="etablissement_baladiya" class="java.lang.String"/>
+	<field name="etablissement_code" class="java.lang.String"/>
+	<field name="etablissement_tel" class="java.lang.String"/>
+	<field name="etablissement_id" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="175" y="10" width="60" height="20" uuid="8f525089-ebc3-4296-aa49-ca5cb40b60f4"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="11"/>
+				</textElement>
+				<text><![CDATA[المؤسسة :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="30" width="60" height="20" uuid="56122f59-88f2-4ffc-b28a-972bc51363ca"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="11"/>
+				</textElement>
+				<text><![CDATA[البلدية :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="50" width="80" height="20" uuid="86ae085e-7db0-4b9e-b3fe-51537fbd88ad"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="11"/>
+				</textElement>
+				<text><![CDATA[ رمز المؤسسة :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="70" width="60" height="20" uuid="c5e8a81c-7da8-40c3-8492-7942a3b57b1c"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="11"/>
+				</textElement>
+				<text><![CDATA[الهاتف :]]></text>
+			</staticText>
+			<image>
+				<reportElement x="245" y="0" width="310" height="90" uuid="db696be1-effc-4d7a-a325-bf0fa22f28e0"/>
+				<imageExpression><![CDATA["C:/Users/salah/Desktop/tarbiya.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="10" width="155" height="20" uuid="013f7f20-83d6-4b3f-97c1-0521ca4b8d75"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{etablissement_nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="34" width="155" height="20" uuid="9291eea1-e3d3-4321-80db-a96adf5358e4"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{etablissement_baladiya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="50" width="155" height="20" uuid="39f1845d-4a5e-472e-ba2f-fc4ababe9734"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{etablissement_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="70" width="155" height="20" uuid="0fd8e710-914b-426b-bafe-d4e44681fab5"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{etablissement_tel}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="339" y="17" width="150" height="30" uuid="75bc61dd-09a6-465f-ac16-7d3831bdf9d5"/>
+				<textElement textAlignment="Center">
+					<font fontName="DejaVu Sans" size="20" isBold="true" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[شهادة مدرسية ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="391" y="0" width="154" height="20" uuid="350c0f7f-6da4-4952-ac6b-ba4c49148cd3"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[يشهد الموقع أسفله السيد :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="446" y="37" width="100" height="20" uuid="a5619aa9-c40e-431f-ad99-4b49f409c928"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[بصفته :]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="398" splitType="Stretch">
+			<staticText>
+				<reportElement x="179" y="34" width="40" height="30" uuid="292d8a84-81d8-413c-b756-1c1e01dc7a1f"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[بتاريخ :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="74" width="155" height="30" uuid="a9d520c3-bedc-4623-a7a8-7ef5dcfb91de"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[المسجل تحث رقم :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="34" width="155" height="30" uuid="cf05fe2c-a8f3-47f0-833a-13dc14e1e03c"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[المولود(ة) ب :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="74" width="90" height="30" uuid="8a165d67-5711-431f-bcf5-8bea0e0e8839"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[الرقم الوطني :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="0" width="155" height="30" uuid="2ff2f8b3-3848-470d-ae9f-a73b1845b041"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[أن التلميد(ة) : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="114" width="154" height="30" uuid="4a7afbc6-fdcf-446b-8f59-e81eb2747db3"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[كان(ت) يتابع دراسته(ها) في : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="199" width="154" height="30" uuid="e736ccbb-28e0-4474-b748-049dca5e52ae"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[سبب المغادرة :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="158" width="154" height="30" uuid="90f3543f-f6b1-4a99-89d0-0549ee1dd58a"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[و غادر(ت) المؤسسة بتاريخ : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="129" y="246" width="262" height="20" uuid="33e7dfeb-d385-4a80-98ba-8147bc3e7793"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ملاحظات : سلمت له هذه الشهادة لأغراض إدارية]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="292" width="30" height="21" uuid="7b9a5b49-204c-419b-bc65-23afbcaa4267"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[في :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="292" width="20" height="20" uuid="9b829b1e-e177-4fa4-8f63-e3f840c868c6"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[حرر]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="324" width="100" height="20" uuid="8575f540-2303-4b78-84f3-995dca785f40"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[توقيع المدير ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="219" y="292" width="100" height="20" uuid="c2b973f6-e425-4d94-9829-4bc3d109dc2d"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{etablissement_baladiya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="235" y="0" width="156" height="30" uuid="2abe3a0c-bcdd-4995-af58-abffe3d2c2ce"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{etudiant_nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="235" y="34" width="156" height="30" uuid="b24902cc-797c-4744-b7d8-49a4f762607d"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{etudiant_lieu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="235" y="74" width="156" height="30" uuid="e0285f68-3f11-481d-a029-b77987dbbbfd"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{etudiant_num}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="235" y="114" width="156" height="30" uuid="97d1ee3e-8286-4231-b302-1f624ad41d7d"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{etudiant_niveau}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="34" width="129" height="30" uuid="8ad01bbb-bfbc-471a-ad57-b952061459d2"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{etudiant_dateN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="74" width="129" height="30" uuid="1d0ba24d-c3f2-4d78-bc9f-09417907fbeb"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{etudiant_code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="235" y="199" width="156" height="30" uuid="b47ef95d-0467-4414-9429-b00d5e6af0de"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{etudiant_decision}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="235" y="158" width="156" height="30" uuid="ba13d2d4-5d82-4f39-948a-8257884ae085"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{etudiant_dateD}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="392" y="22" width="60" height="20" uuid="4ffe037d-1c80-45a0-8c3c-eb5eba11925f"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" isBold="true" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[ملحوظة : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="22" width="330" height="20" uuid="20cb0673-9a4c-46a1-a798-2e3fcb03cfea"/>
+				<textElement textAlignment="Right">
+					<font fontName="DejaVu Sans" size="12" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[هذه الشهادة  لا تخول لصاحبها التسجيل في مؤسسة أخرى]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="6" splitType="Stretch"/>
+	</summary>
+</jasperReport>

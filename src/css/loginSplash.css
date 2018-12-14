@@ -1,3 +1,7 @@
+.root{
+    -fx-background-image: url('../images/backPro.jpeg');
+    -fx-background-size:cover;
+}
 .parent{
     -fx-background-color: #f1f2f6;
 }

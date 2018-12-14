@@ -1,8 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="controller.EmployeController">
-    
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="750.0" stylesheets="@../css/profilStyle.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeController">
+   <children>
+      <JFXTextField fx:id="prenom" alignment="CENTER_RIGHT" labelFloat="true" layoutX="455.0" layoutY="30.0" prefHeight="30.0" prefWidth="260.0" promptText="الإسم الشخصي" />
+      <JFXTextField fx:id="nom" alignment="CENTER_RIGHT" labelFloat="true" layoutX="166.0" layoutY="30.0" prefHeight="30.0" prefWidth="260.0" promptText="الإسم العائلي" />
+      <JFXButton fx:id="buttonAddEmploye" alignment="CENTER" layoutX="22.0" layoutY="27.0" onAction="#saveEmploye" prefHeight="30.0" prefWidth="110.0" styleClass="btn-add" text="إظافة" textFill="#f4f2f2">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="buttonUpdateEmploye" alignment="CENTER" layoutX="22.0" layoutY="113.0" onAction="#updateEmploye" prefHeight="30.0" prefWidth="110.0" styleClass="btn-update" text="تغيير" textFill="#f4f2f2">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="buttonDeleteEmploye" alignment="CENTER" layoutX="22.0" layoutY="203.0" onAction="#deleteEmploye" prefHeight="30.0" prefWidth="110.0" styleClass="btn-delete" text="مسح" textFill="#f4f2f2">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="email" alignment="CENTER_RIGHT" labelFloat="true" layoutX="455.0" layoutY="89.0" prefHeight="30.0" prefWidth="260.0" promptText="البريد الإلكتروني" />
+      <JFXDatePicker fx:id="dateN" layoutX="453.0" layoutY="146.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="28.0" prefWidth="270.0" promptText="تاريخ الإزدياد" />
+      <JFXDatePicker fx:id="dateE" layoutX="166.0" layoutY="146.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="28.0" prefWidth="270.0" promptText="تاريخ بداية العمل" />
+      <JFXComboBox fx:id="profil" layoutX="457.0" layoutY="207.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="186.0" promptText="إختر الوظيفة من هنا " />
+      <Label alignment="CENTER_RIGHT" layoutX="649.0" layoutY="207.0" prefHeight="25.0" prefWidth="66.0" text="الوظيفة" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTreeTableView fx:id="treeTableView" layoutX="22.0" layoutY="310.0" prefHeight="263.0" prefWidth="698.0">
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </JFXTreeTableView>
+      <JFXTextField fx:id="searshEmploye" alignment="CENTER_RIGHT" labelFloat="true" layoutX="470.0" layoutY="267.0" prefHeight="33.0" prefWidth="250.0" promptText="إبحث هنا" />
+      <JFXPasswordField fx:id="pass" alignment="CENTER_RIGHT" labelFloat="true" layoutX="166.0" layoutY="89.0" prefHeight="30.0" prefWidth="260.0" promptText="كلمة السر" />
+   </children>
 </AnchorPane>

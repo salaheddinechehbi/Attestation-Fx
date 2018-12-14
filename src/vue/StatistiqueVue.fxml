@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatistiqueController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="750.0" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="etablissementNom" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="90.0" layoutY="14.0" prefHeight="26.0" prefWidth="384.0" text="Label" textAlignment="CENTER" AnchorPane.rightAnchor="276.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="14.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="210.0" styleClass="box3" AnchorPane.rightAnchor="526.0">
+               <children>
+                  <Label layoutX="88.0" layoutY="101.0" text="عدد التلاميذ" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="countEtud" layoutX="82.0" layoutY="103.0" text="T" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="264.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="210.0" styleClass="box2" AnchorPane.rightAnchor="276.0">
+               <children>
+                  <Label text="عدد الوظائف" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="Arial Narrow Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="countProf" layoutX="82.0" layoutY="103.0" text="T" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="510.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="210.0" styleClass="box1" AnchorPane.rightAnchor="30.0">
+               <children>
+                  <Label text="عدد الموظفون" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="Arial Narrow Bold Italic" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="countEmp" layoutX="82.0" layoutY="103.0" text="T" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Light" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <Label fx:id="nomEmploye" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="344.0" layoutY="60.0" prefHeight="26.0" prefWidth="384.0" text="Label" textAlignment="CENTER" AnchorPane.rightAnchor="22.0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <BarChart fx:id="empStatique" layoutX="14.0" layoutY="190.0" legendVisible="false" prefHeight="369.0" prefWidth="343.0" style="-fx-background-color: #ffffff;" styleClass="chart" title="عدد الموظفون حسب الوظيفة" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="393.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <PieChart fx:id="pieDecision" layoutX="375.0" layoutY="156.0" prefHeight="394.0" prefWidth="373.0" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package classe;
 
+import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,12 +10,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-/**
- *
- * @author salah
- */
 @Entity
-public class Employe {
+public class Employe extends RecursiveTreeObject<Employe> {
     
     @Id @GeneratedValue(strategy =  GenerationType.AUTO)
     private int id;
@@ -37,6 +29,18 @@ public class Employe {
     private Etablissement etablissement;
 
     public Employe() {
+    }
+
+    public Employe(int id, String nom, String prenom, String email, Profil profil, String password, Date dateNaissance, Date dateEmbouche, Etablissement etablissement) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.profil = profil;
+        this.password = password;
+        this.dateNaissance = dateNaissance;
+        this.dateEmbouche = dateEmbouche;
+        this.etablissement = etablissement;
     }
 
     public Employe(String nom, String prenom, String email, Profil profil, String password, Date dateNaissance, Date dateEmbouche, Etablissement etablissement) {

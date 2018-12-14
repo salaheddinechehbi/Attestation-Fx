@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package service;
 
 import classe.Profil;
@@ -13,10 +8,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import util.HibernateUtil;
 
-/**
- *
- * @author Utilisateur
- */
 public class ProfilService implements IDao<Profil> {
 
     @Override
@@ -117,6 +108,26 @@ public class ProfilService implements IDao<Profil> {
             return m;
         }
 
+    }
+    
+    public int countProfil(){
+        int nbr = 0;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        nbr = Integer.parseInt(session.createQuery("Select Count(*) From Profil").uniqueResult().toString());
+        session.getTransaction().commit();
+        session.close();
+        return nbr;
+    }
+    
+    public Profil findProfilByLibelle(String libelle){
+        Profil p = null;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        p = (Profil) session.createQuery("From Profil where libelle=:libelle").setParameter("libelle", libelle).uniqueResult();
+        session.getTransaction().commit();
+        session.close();
+        return p;
     }
 
 }
